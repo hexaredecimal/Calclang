@@ -1,0 +1,7 @@
+
+
+fn zero() -> (c)
+  : where c -> i32 = 
+    c = 0 
+
+

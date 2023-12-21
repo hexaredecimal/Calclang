@@ -1,0 +1,17 @@
+using I32::{zero}
+using Math::{succ}
+
+fn stdin() -> (x)
+  :where x -> i32 = 
+    x = zero()
+
+fn stdout() -> (x)
+  :where x -> i32 = 
+    x = succ(stdin())
+
+fn stderr() -> (x)
+  :where x -> i32 = 
+    x = succ(stdout())
+
+
+

@@ -1,0 +1,91 @@
+
+fn max(x, y) -> (z)
+  : where x -> i32, y -> i32, z -> i32 = 
+    z = 
+      if x > y
+        x
+      else y 
+
+
+fn min(x, y) -> (z)
+  : where x -> i32, y -> i32, z -> i32 = 
+    z = 
+      if x < y
+        x
+      else y 
+
+
+fn clamp(x, low, high) -> (z)
+  : where x -> i32, low -> i32, high -> i32, z -> i32 = 
+    z = if x < low {
+      low
+    } else if x > high {
+      high
+    } else x 
+
+
+fn square(x) -> (y) 
+  : where x -> i32, y -> i32  = 
+    y = x * x
+
+
+fn fact(x) -> (y)
+  :where x -> i32, y -> i32 = 
+    y = match x {
+      1 => x, 
+      _ => x * fact(x - 1)
+    }
+
+
+fn succ(x) -> (c)
+  : where x -> i32, c -> i32 = 
+    c = x += 1
+
+
+fn pred(x) -> (c)
+  : where x -> i32, c -> i32 = 
+    c = x -= 1
+
+
+fn even(x) -> (y)
+  :where x -> i32, y -> bool = 
+    y = match x % 2 {
+      0 => true, 
+      _ => false
+    }
+
+
+fn odd(x) -> (y)
+  :where x -> i32, y -> bool = 
+    y = even(x) ?? true
+
+
+fn linear(a, b, c) -> (d)
+  :where a -> i32, b -> i32, c -> i32, d -> i32 = 
+  d = (a * b) + c
+
+
+fn quadratic(x, a, b, c) -> (d)
+  :where x -> i32, a -> i32, b -> i32, c -> i32, d -> i32 = 
+    d = (a * 2) + linear(b, x, c)
+
+
+fn fib(n) -> (m) 
+  : where n -> i32, m -> i32 = 
+    m = match n {
+      0 => 0, 
+      1 => 1,
+      _ => fib(n - 1) + fib(n - 2)
+    }
+
+
+fn odd_from(x) -> (z)
+  :where x -> i32, z -> i32 = 
+    z = (2 * x) + 1 
+
+
+fn even_from(x) -> (z)
+  :where x -> i32, z -> i32 = 
+    z = (2 * x) 
+
+

@@ -1,0 +1,10 @@
+using IO::{stdin}
+
+
+fn main() -> (c)
+  :where c -> i32 = 
+  c = {
+    1
+  }
+
+

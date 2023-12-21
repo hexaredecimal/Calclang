@@ -1,0 +1,16 @@
+
+
+fn is_true(x) -> (y)
+  :where x -> bool, y -> bool =
+    y = if x {
+      true
+    } else {
+      false
+    } 
+
+fn is_false(x) -> (y)
+  :where x -> bool, y -> bool = 
+    y = is_true(x) ?? true
+
+
+
